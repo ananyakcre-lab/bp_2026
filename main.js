@@ -1,6 +1,7 @@
 
 let programText = {"yes1":"Nothing happens... you're still sick :( <br> However, after a few days, you get better naturally!",
-    "no1":"You decide to go the natural way... warm water and rest is the way to go!<br>You eventually get better!"};
+    "no1":"You decide to go the natural way... warm water and rest is the way to go!<br>You eventually get better!",
+    "yes2":"After a long day, you come home to your room smelling like Lysol. It's a bit strong, "};
 let choice1 = [];
 
 function nextPage(){
@@ -21,10 +22,12 @@ function page2(){
 }
 
 function page2p2(){
-    
+    document.getElementById("timejump").style.display = "none";
     document.getElementById("sim-text").innerHTML = "It's your germaphobic sister, who pleads to disinfect your room 3 times. <br> Do you let your sister disinfect your room?";
     document.getElementById("b3").style.display = "none";
     document.getElementById("b1").style.display = "block";
+    document.getElementById("b2").style.display = "block";
+    document.getElementById("b1").innerHTML = "<button onclick = 'update("
 
 
 }
