@@ -2,7 +2,8 @@
 let programText = {"yes1":"Nothing happens... you're still sick :( <br> However, after a few days, you get better naturally!",
     "no1":"You decide to go the natural way... warm water and rest is the way to go!<br>You eventually get better!",
     "yes2":"After a long day, you come home to your room smelling like Lysol. It's a bit strong, but at least your room is clean!",
-    "no2":"You come home after a long day of work, and you see your cluttered room. You can't take it anymore, and you clean your room using minimal disinfectant; you weren't to sick in the first place."};
+    "no2":"You come home after a long day of work, and you see your cluttered room. You can't take it anymore, and you clean your room using minimal disinfectant; you weren't to sick in the first place."
+};
 let choice1 = [];
 
 function nextPage(){
@@ -10,6 +11,8 @@ function nextPage(){
     nextButton.style.display ="block";//used ai overview on google to explain how to ak the button appear
     document.getElementById("sickdiv").innerHTML = "<img id = 'sick' src='images/healthystick.png'>" //vscode ai used to fill in syntax  for everything after innerHTML = 
 }
+
+
 
 function page2(){
     document.getElementById("timejump").innerHTML = "A few days later...";
@@ -22,7 +25,31 @@ function page2(){
 }
 function steak(){
     console.log("hi");
+    document.getElementById("sim-text").innerHTML = "That night, for dinner, your mom prepared steak. As you're helping her set up for dinner, you see that the steak has been treated with antibiotics. Eat or don't eat?";
+    document.getElementById("b2y").style.display = "none";
+    document.getElementById("b2n").style.display = "none";
+    document.getElementById("eat").style.display = "block";
+    document.getElementById("noeat").style.display = "block";
 }
+
+function update3(text,button){  
+    document.getElementById("sim-text").innerHTML = programText[text];
+    document.getElementById("b1").disabled = true;
+    document.getElementById("b2").disabled = true;
+    document.getElementById("b2y").disabled = true;
+    document.getElementById("b2n").disabled = true;
+    if (button === 'yes'){
+        choice1.push("yes");
+        
+    }
+    else{
+        choice1.push("no");
+    }
+    console.log(choice1)   
+    
+    document.getElementById("invNext2").style.display = "block";
+}
+
 function page2p2(){
     document.getElementById("timejump").style.display = "none";
     document.body.style.backgroundImage = "url('images/messyroom.png')";
@@ -30,8 +57,8 @@ function page2p2(){
     document.getElementById("b3").style.display = "none";
     document.getElementById("b2y").disabled = false;
     document.getElementById("b2n").disabled = false;
-    document.getElementById("b2y").style.display = "block";
-    document.getElementById("b2n").style.display = "block";
+    document.getElementById("b2y").style.display = "inline-block";
+    document.getElementById("b2n").style.display = "inline-block";
     document.getElementById("invNext").innerHTML = '<button id="invNext" class = "buttons" onclick="steak()">Next</button>';
     
 }
@@ -50,7 +77,7 @@ function update2(text,button){
     }
     console.log(choice1)   
     
-    document.getElementById("invNext").style.display = "block";
+    document.getElementById("invNext2").style.display = "block";
 }
 function update(text,button){
     document.getElementById("sim-text").innerHTML = programText[text];

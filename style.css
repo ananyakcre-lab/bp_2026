@@ -11,6 +11,7 @@
     background-color:rgb(83, 182, 176);
     width:10vw;
     height:10vh;
+    display:inline-block;/*used ai to generate this line of code*/
 }
 .intro-text{
    margin-top:100px;
@@ -41,38 +42,45 @@ body {
     display:none;
 }
 
+#invNext2{
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    display:none;
+}
 
-/* mini stars appear/twinkle*/
+
+/* mini stars appear/twinkle i did use a little ai to hel*/
 .corner-stars {
     position: fixed;
     width: 80px;
     height: 80px;
-    pointer-events:none ;
+    pointer-events: none;
     z-index: 0;
 }
 
-#top-left-stars {top: 0; left: 0;}
-#top-right-stars {top: 0; right: 0;}
-#bottom-left-stars{bottom: 0;}
-#bottom-right-stars{ bottom: 0; right: 0;}
+#top-left-stars { top: 0; left: 0; }
+#top-right-stars { top: 0; right: 0; }
+#bottom-left-stars { bottom: 0; left: 0; }
+#bottom-right-stars { bottom: 0; right: 0; }
 
-.star{
+.corner-stars::before {
+    content: '';
     position: absolute;
+    top: 10px;  
+    left: 10px;
     width: 20px;
     height: 20px;
-    background-image: url("stars.png");
+    background-image: url("stars.png"); 
     background-size: contain;
     background-repeat: no-repeat;
-    opacity: 0.7;
+    opacity: 0.6; 
+    animation: subtleTwinkle 3s ease-in-out infinite alternate;
 }
 
-@keyframes floatTwinkle{
-    0% { transform: translateY(0px) scale(1); opacity: 0.3; }
-    25% { transform: translateY(-5px) scale(1.1); opacity: 0.6; }
-    50% { transform: translateY(0px) scale(1); opacity: 1; }
-    75% { transform: translateY(5px) scale(0.8); opacity: 0.6; }
-    100% { transform: translateY(0px) scale(1); opacity: 0.3; }
 
-
+@keyframes subtleTwinkle {
+    0%   { opacity: 0.5; }
+    50%  { opacity: 0.8; }
+    100% { opacity: 0.5; }
 }
-'''
