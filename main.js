@@ -7,9 +7,8 @@ let choice1 = [];
 
 function nextPage(){
     nextButton = document.getElementById("invNext");
-    nextButton.innerHTML="Next";
     nextButton.style.display ="block";//used ai overview on google to explain how to ak the button appear
-    document.getElementById("sickdiv").innerHTML = "<img id = 'sick' src='images/healthystick.png' alt='healthy stick figure'>" //vscode ai used to fill in syntax  for everything after innerHTML = 
+    document.getElementById("sickdiv").innerHTML = "<img id = 'sick' src='images/healthystick.png'>" //vscode ai used to fill in syntax  for everything after innerHTML = 
 }
 
 function page2(){
@@ -21,7 +20,9 @@ function page2(){
     document.getElementById("sickdiv").innerHTML = "<img id = 'sick' src='images/confusion.png''>"
     document.getElementById("b3").style.display = "block";
 }
-
+function steak(){
+    console.log("hi");
+}
 function page2p2(){
     document.getElementById("timejump").style.display = "none";
     document.body.style.backgroundImage = "url('images/messyroom.png')";
@@ -31,9 +32,26 @@ function page2p2(){
     document.getElementById("b2n").disabled = false;
     document.getElementById("b2y").style.display = "block";
     document.getElementById("b2n").style.display = "block";
+    document.getElementById("invNext").innerHTML = '<button id="invNext" class = "buttons" onclick="steak()">Next</button>';
     
 }
-
+function update2(text,button){  
+    document.getElementById("sim-text").innerHTML = programText[text];
+    document.getElementById("b1").disabled = true;
+    document.getElementById("b2").disabled = true;
+    document.getElementById("b2y").disabled = true;
+    document.getElementById("b2n").disabled = true;
+    if (button === 'yes'){
+        choice1.push("yes");
+        
+    }
+    else{
+        choice1.push("no");
+    }
+    console.log(choice1)   
+    
+    document.getElementById("invNext").style.display = "block";
+}
 function update(text,button){
     document.getElementById("sim-text").innerHTML = programText[text];
     document.getElementById("b1").disabled = true;
