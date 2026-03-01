@@ -6,7 +6,7 @@
         <style> 
             body {
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                background-image: url('images/bg.jpg');
+                background-image: url('images/updatedbg.png');
                 /*This was made prettier with co-pilot*/
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -15,14 +15,20 @@
             }
         </style>
     </head>
-
     <body>
+        <h3 style="background-color: white;" id = "timejump"></h3>
     <div class = "intro-text">
+    
      <h1 id = "sim-text">You are sick, and you don't know if you have a viral or bacterial infection. <br>Do you take antibiotics?</h1>
      <div id = "yes-no-buttons">
-        <button class = "buttons" onclick = "update('yes1')">Yes</button>
-        <button class = "buttons" onclick = "update('no1')">No</button>
+        <button id = "b1"class = "buttons" onclick = "update('yes1','yes')">Yes</button>
+        <button id = "b2" class = "buttons" onclick = "update('no1','no')">No</button>
+        <button style = "display:none;" id = "b3" onclick = "page2p2()" class = "buttons" >Next</button>
     </div>
+    <div id = "sickdiv">
+    <img id = "sick" src="images/sickstick.png">
+    </div>
+    <button id="invNext" class = "buttons" onclick="page2()"></button>
     </body>
     </div>
 
