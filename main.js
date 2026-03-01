@@ -24,6 +24,7 @@ function page2(){
 
 function page2p2(){
     document.getElementById("timejump").style.display = "none";
+    document.body.style.backgroundImage = "url('images/messyroom.png')";
     document.getElementById("sim-text").innerHTML = "It's your germaphobic sister, who pleads to disinfect your room 3 times. <br> Do you let your sister disinfect your room?";
     document.getElementById("b3").style.display = "none";
     document.getElementById("b2y").disabled = false;
@@ -52,5 +53,7 @@ function update(text,button){
 
 //this is the stick figure walking in btw AI was used to confirm facts about the antibiotic resistance
 
-this.load.image("sickstick", "images/sickstick.png");
-this.player.velocity
+
+//"That night, for dinner, your mom perpared steak. As you're helping her clean up the kitchen, you see that the steak has been treated with antibiotics. Eat or don't eat?"
+//"eat, i love steak!" > "You eat the steak happily, however you don't know that in the past few days you've created a super bug"
+//"Antibiotics? gross! i'm making my own dinner" good job, over the past few weeks you've avoided creating a powerful superbug, one that could cause your whole family to fall sick. However, you still did soemthing that could cause a super bug. You took uneccessary antibiotics when you didn't have a bacterial infection.

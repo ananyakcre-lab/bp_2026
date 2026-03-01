@@ -9,8 +9,8 @@
     border-radius:10px;
     font-size:25px;
     background-color:rgb(83, 182, 176);
-    width:100px;
-    height: 50px;
+    width:10vw;
+    height:10vh;
 }
 .intro-text{
    margin-top:100px;
@@ -43,36 +43,26 @@ body {
 
 
 /* mini stars appear/twinkle*/
-#starsContainer {
+.corner-stars {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    pointer-events:none ;
     z-index: 0;
 }
 
-.star {
-    position: fixed;
+#top-left-stars {top: 0; left: 0;}
+#top-right-stars {top: 0; right: 0;}
+#bottom-left-stars{bottom: 0;}
+#bottom-right-stars{ bottom: 0; right: 0;}
+
+.star{
+    position: absolute;
     width: 20px;
-    height: 20px ;
-    opacity: 0.8;
-    animation: floatTwinkle linear infinite;
-}
+    height: 20px;
+    background-image: url("stars.png")
+    
 
-@keyframes floatTwinkle {
-    0% { transform: translateY(0) scale(1); opacity: 0.5;}
 
 
 }
-
-
-
-
-
-
-
-
-
