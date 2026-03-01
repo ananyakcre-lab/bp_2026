@@ -3,12 +3,20 @@ let programText = {"yes1":"Nothing happens... you're still sick :( <br> However,
     "no1":"You decide to go the natural way... warm water and rest is the way to go!<br>You eventually get better!",
     "yes2":"After a long day, you come home to your room smelling like Lysol. It's a bit strong, but at least your room is clean!",
     "no2":"You come home after a long day of work, and you see your cluttered room. You can't take it anymore, and you clean your room using minimal disinfectant; you weren't too sick in the first place.",
-    "yes3":"You eat the steak happily, but you get sick again. You try to take more antibiotics, but you've created a super bug, and now it can't be cured!",
-    "no3": "Good job, over the past few weeks you've avoided creating a powerful superbug, one that could cause your whole family to fall sick. However, you still did something that could cause a super bug. You took unnecessary antibiotics when you didn't have a bacterial infection."
+    "yes3":"You eat the steak happily, but you get sick again. You try to take more antibiotics, but you've created a superbug by using too much unneccesary antibiotics, and now it can't be cured!",
+    "y2n1": "You don't eat the steak, and you don't get sick, but you've created a superbug and you and your family are susceptible to getting the superbug.",
+    "n2y1" : "Good job, over the past few days you've avoided creating a powerful superbug, one that could cause your whole family to fall sick. However, you still did something that could cause a superbug. You ate steak that was treated with antibiotics.",
+    "n1y1n1" : "Good job, over the past few days you've avoided creating a powerful superbug, one that could cause your whole family to fall sick. However, you still did something that could cause a superbug. Your sister cleaned the room multiple times with antibiotics, whch can contribute to the formation of a superbug.",
+    "y1n2" : "Good job, over the past few days you've avoided creating a powerful superbug, one that could cause your whole family to fall sick. However, you still did something that could cause a superbug. You ate unneccessary antibiotics when you actually had a viral infection, not a bacterial one.",
+    "n3" : "Good job, you avoided creating a superbug by avoiding unnecessary antibiotics over the past few days!",
+    "n1y2" : "You eat the steak happily, but you don't know that in the past few days, you've created a superbug that can infect you and your family.",
+    "y1n1y1":"You eat the steak happily, but you don't know that a superbug is brewing inside of you since you've used unneccesary antibiotics twice in the past few days.",
+        //Good job, over the past few weeks you've avoided creating a powerful superbug, one that could cause your whole family to fall sick. However, you still did something that could cause a super bug. You ate steak that was treated with antibiotics.
 };
 let choice1 = [];
 
 function nextPage(){
+    //<div class="text-style">
     nextButton = document.getElementById("invNext");
     nextButton.style.display ="block";//used ai overview on google to explain how to ak the button appear
     document.getElementById("sickdiv").innerHTML = "<img id = 'sick' src='images/healthystick.png'>" //vscode ai used to fill in syntax  for everything after innerHTML = 
@@ -32,12 +40,7 @@ function steak(){
     document.getElementById("noeat").style.display = "inline-block";
 }
 
-function update3(text,button){  
-    document.getElementById("sim-text").innerHTML = programText[text];
-    document.getElementById("b1").disabled = true;
-    document.getElementById("b2").disabled = true;
-    document.getElementById("b2y").disabled = true;
-    document.getElementById("b2n").disabled = true;
+function update3(button){  
     if (button === 'yes'){
         choice1.push("yes");
         
@@ -45,10 +48,63 @@ function update3(text,button){
     else{
         choice1.push("no");
     }
-    console.log(choice1)   
+    console.log(choice1)
+    document.getElementById("eat").style.display = "none";
+    document.getElementById("noeat").style.display = "none";
+    document.getElementById("invNext2").style.display = "none";
+    if (choice1[0] === "yes"){
+        if (choice1[1] === "yes"){
+            if (choice1[2] === "yes"){
+                document.getElementById("sim-text").innerHTML = programText["yes3"];
+            }
+            else { 
+                document.getElementById("sim-text").innerHTML = programText["y2n1"];
+            }
+        }
+        else{
+            if (choice1[2] === "yes"){
+                document.getElementById("sim-text").innerHTML = programText["y1n1y1"];
+            }
+            else { 
+                document.getElementById("sim-text").innerHTML = programText["y1n2"];
+        }
+        }
+    }
+    else{
+        if (choice1[1] === "yes"){
+            if (choice1[2] === "yes"){
+                document.getElementById("sim-text").innerHTML = programText["n1y2"];
+            }
+            else { 
+                document.getElementById("sim-text").innerHTML = programText["n1y1n1"];
+            }
+        }
+        else{
+            if (choice1[2] === "yes"){
+                document.getElementById("sim-text").innerHTML = programText["n2y1"];
+            }
+            else { 
+                document.getElementById("sim-text").innerHTML = programText["n3"];
+        }
+    }
+    document.getElementById("lastbutton").style.display = "block";
+    // document.getElementById("sim-text").innerHTML = programText[text];
+    // document.getElementById("b1").disabled = true;
+    // document.getElementById("b2").disabled = true;
+    // document.getElementById("b2y").disabled = true;
+    // document.getElementById("b2n").disabled = true;
+    // if (button === 'yes'){
+    //     choice1.push("yes");
+        
+    // }
+    // else{
+    //     choice1.push("no");
+    // }
+    // console.log(choice1)   
     
-    document.getElementById("invNext2").style.display = "block";
+    // document.getElementById("invNext2").style.display = "block";
 }
+    }
 
 function page2p2(){
     document.getElementById("timejump").style.display = "none";
@@ -95,10 +151,3 @@ function update(text,button){
     console.log(choice1)
     nextPage()
 }
-
-//this is the stick figure walking in btw AI was used to confirm facts about the antibiotic resistance
-
-
-//"That night, for dinner, your mom perpared steak. As you're helping her clean up the kitchen, you see that the steak has been treated with antibiotics. Eat or don't eat?"
-//"eat, i love steak!" > "You eat the steak happily, however you don't know that in the past few days you've created a super bug"
-//"Antibiotics? gross! i'm making my own dinner" good job, over the past few weeks you've avoided creating a powerful superbug, one that could cause your whole family to fall sick. However, you still did soemthing that could cause a super bug. You took uneccessary antibiotics when you didn't have a bacterial infection.

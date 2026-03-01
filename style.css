@@ -1,28 +1,32 @@
-.topnav{
-    position:fixed;
-    background-color:#f9cde2;
-    overflow: hidden;
-    width:100%;/*this line was generated with vscode ai code generator*/
-}
-
 .buttons{
-    border-radius:10px;
-    font-size:25px;
-    background-color:rgb(83, 182, 176);
+    background-color: #71b3db; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
     width:10vw;
     height:10vh;
     display:inline-block;/*used ai to generate this line of code*/
 }
+
+    
 .buttons:hover {
     background-color: #45a049; /* Darker green on hover */
-        }
+    }
+
 .intro-text{
    margin-top:50px;
    margin-left:200px; 
    width:85%;
 
 }
-
+/* 
 #big-box{
     background-color: aliceblue;
     height: fit-content;
@@ -30,7 +34,7 @@
     margin-top:25px;
 
     
-}
+} */
 #noeat{
     width:fit-content;
 }
@@ -99,3 +103,52 @@ body {
     50%  { opacity: 0.8; }
     100% { opacity: 0.5; }
 }
+
+.text-style {
+            background-color: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+            size: 15px;
+}
+
+#lastbutton{
+    width:fit-content;
+    height:fit-content;
+    font-size:40px;
+}
+
+#sister{
+    
+}
+
+#timejump, #sim-text, #b1, #b2, #invNext, #sickdiv, #b3, #b2y, #b2n, #eat, #noeat, #invNext2 {
+    background-color: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+    padding: 2px;
+    padding-left:5px;
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 500px;
+    max-height: 200px;
+    max-width: 600px;
+    size: 15px;
+    font-size: 25px; }
+.buttons, .buttons2 {
+    background-color: #41a2de; /* Green */
+    border: none;
+    color: rgb(71, 222, 93);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+    .buttons:hover {
+    background-color: #e33917; /* Darker green on hover */
+    }

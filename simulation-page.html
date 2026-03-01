@@ -5,8 +5,8 @@
         <script src="main.js"></script>
         <style> 
             body {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            background-image: url('images/bg.jpg');
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+            background-image: url('images/sickbg.png');
                 /*This was made prettier with co-pilot*/
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -22,25 +22,28 @@
     <center>
     <h3 id = "timejump"></h3>
      <h1 id = "sim-text">You are sick, and you don't know if you have a viral or bacterial infection. <br>Do you take antibiotics?</h1>
-     <div id = "yes-no-buttons">
+
         <button id = "b1" class = "buttons" onclick = "update('yes1','yes')">Yes</button>
         <button id = "b2" class = "buttons" onclick = "update('no1','no')">No</button>
         <div>
         
         <button id = "b2y" style = "display:none;" class = "buttons" onclick = "update2('yes2','yes')">Yes</button>
         <button id = "b2n" style = "display:none;" class = "buttons" onclick = "update2('no2','no')">No</button>
-        </div>
+
         <button style = "display:none;" id = "b3" onclick = "page2p2()" class = "buttons" >Next</button>
     </div>
     <div id = "sickdiv">
     <img id = "sick" src="images/sickstick.png">
+    <img style = "display:none;" id = "sister" src = "images/sister.png">
+
     </div>
     <button id="invNext" class = "buttons" onclick="page2()">Next</button>
        <button id="invNext2" class = "buttons" onclick="steak()">Next</button>
-       <button style = "display:none;" id = "eat" class = "buttons" onclick = "update3('yes3','yes3')">Eat, I love steak!</button>
-        <button style = "display:none;" id = "noeat" class = "buttons" onclick = "update3('no3','no3')">Antibiotics? Gross! I'm making my own dinner!</button>
+       <button style = "display:none;" id = "eat" class = "buttons" onclick = "update3('yes')">Eat, I love steak!</button>
+        <button style = "display:none;" id = "noeat" class = "buttons" onclick = "update3('no')">Antibiotics? Gross! I'm making my own dinner!</button>
     </div>
     </div>
+    <button class="buttons" id="lastbutton" style = "display:none;">Learn more about superbugs and antibiotic overuse!</button>
     </center>
     </body>
     
