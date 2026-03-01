@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=2.0">
         <title>Antibiotics</title>
         <link rel = "stylesheet" href="style.css">
         <script src="main.js"></script>
         <style> 
             body {
-                font-family: 'Google Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                background-image: url(images/landing-bg.jpg);
+                height: 100vh;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
                 background-color: rgb(255, 255, 255); 
             }
+            .text {
+                background-color: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+                padding: 20px;
+                border-radius: 10px;
+                margin: 50px auto;
+                width: 80%;
+                max-width: 600px;
+                size: 15px;
+            }
+                .buttons {
+                    background-color: #71b3db; /* Green */
+                    border: none;
+                    color: white;
+                    padding: 15px 32px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+                .buttons:hover {
+                    background-color: #45a049; /* Darker green on hover */
+                }
+                h2 {
+                    font-size: 15px;
+                }
         </style> 
         
     </head>
@@ -19,11 +53,18 @@
         </div> -->
         <div class = "text">
             <center>
-            <h1 >Antibiotics: Solving problems or creating them?</h1>
-            <h2>(A simulation to show you how you could unintentionally be using antibiotics)</h2>
+            <h1 >Antibiotic Awareness Simulation</h1>
+            <h2>
+                Welcome to this interactive simulation designed to educate users about the importance of responsible antibiotic 
+                use and the consequences of antibiotic resistance. In this simulation, you will navigate through various scenarios
+                 that mimic real-life situations. You will make decisions on whether to take 
+                 antibiotics or not, and see how those decisions impact your health and the broader community over time. 
+                 Through this experience, you will gain a deeper understanding of how antibiotic resistance develops and
+                  why it is crucial to use antibiotics wisely to preserve their effectiveness for future generations.
+            </h2>
             <h3>Click the button to start the simulation</h3><!--this line was made by the vscode fill in ai thingy --> 
             <a href = "simulation-page.html">
-                <button class = "buttons"onclick = "simulation()">Start Simulation</button>
+                <button class = "buttons"onclick = "simulation()"> Start</button>
             </a><!--we used the google ai overview to figure out how to link it to a new page, but we wrote the code ourselves --> 
         
         </center>

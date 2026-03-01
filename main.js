@@ -28,8 +28,8 @@ function steak(){
     document.getElementById("sim-text").innerHTML = "That night, for dinner, your mom prepared steak. As you're helping her set up for dinner, you see that the steak has been treated with antibiotics. Eat or don't eat?";
     document.getElementById("b2y").style.display = "none";
     document.getElementById("b2n").style.display = "none";
-    document.getElementById("eat").style.display = "block";
-    document.getElementById("noeat").style.display = "block";
+    document.getElementById("eat").style.display = "inline-block";/*vscode ai used to do this line and the line below*/
+    document.getElementById("noeat").style.display = "inline-block";
 }
 
 function update3(text,button){  
