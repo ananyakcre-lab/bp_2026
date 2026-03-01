@@ -33,8 +33,9 @@
         <button style = "display:none;" id = "b3" onclick = "page2p2()" class = "buttons" >Next</button>
     </div>
     <div id = "sickdiv">
-    <img id = "sick" src="images/sickstick.png">
+    <img style = "display: none;" = "sick" src="images/sickstick.png">
     <img style = "display:none;" id = "sister" src = "images/sister.png">
+    <img style = "display:none;" id = "end" src = "images/superbug3.png">
 
     </div>
     <button id="invNext" class = "buttons" onclick="page2()">Next</button>
@@ -43,7 +44,9 @@
         <button style = "display:none;" id = "noeat" class = "buttons" onclick = "update3('no')">Antibiotics? Gross! I'm making my own dinner!</button>
     </div>
     </div>
-    <button class="buttons" id="lastbutton" style = "display:none;">Learn more about superbugs and antibiotic overuse!</button>
+    <center>
+    <button class="buttons" id="lastbutton" onclick="end()" style = "display:none;">Learn more about superbugs and antibiotic overuse!</button>
+    </center>
     </center>
     </body>
     

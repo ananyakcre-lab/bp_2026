@@ -19,8 +19,8 @@ function nextPage(){
     //<div class="text-style">
     nextButton = document.getElementById("invNext");
     nextButton.style.display ="block";//used ai overview on google to explain how to ak the button appear
-    document.getElementById("sickdiv").innerHTML = "<img id = 'sick' src='images/healthystick.png'>" //vscode ai used to fill in syntax  for everything after innerHTML = 
-}
+    document.body.style.backgroundImage = "url('images/unsickify.png')";  //vs code ai used for this line
+    }
 
 function page2(){
     document.getElementById("timejump").innerHTML = "A few days later...";
@@ -28,11 +28,12 @@ function page2(){
     document.getElementById("b1").style.display = "none";
     document.getElementById("b2").style.display = "none";
     document.getElementById("invNext").style.display = "none";
-    document.getElementById("sickdiv").innerHTML = "<img id = 'sick' src='images/confusion.png''>"
+    document.body.style.backgroundImage = "url('images/confuzzlement.png')";  //vs code ai used for this line
     document.getElementById("b3").style.display = "block";
 }
 function steak(){
     console.log("hi");
+    document.body.style.backgroundImage = "url('images/steak.png')";
     document.getElementById("sim-text").innerHTML = "That night, for dinner, your mom prepared steak. As you're helping her set up for dinner, you see that the steak has been treated with antibiotics. Eat or don't eat?";
     document.getElementById("b2y").style.display = "none";
     document.getElementById("b2n").style.display = "none";
@@ -41,6 +42,7 @@ function steak(){
 }
 
 function update3(button){  
+    document.body.style.backgroundImage = "url('images/house.png')";
     if (button === 'yes'){
         choice1.push("yes");
         
@@ -88,6 +90,7 @@ function update3(button){
         }
     }
     document.getElementById("lastbutton").style.display = "block";
+    document.body.style.backgroundColor = "#f6dcec";
     // document.getElementById("sim-text").innerHTML = programText[text];
     // document.getElementById("b1").disabled = true;
     // document.getElementById("b2").disabled = true;
@@ -108,7 +111,7 @@ function update3(button){
 
 function page2p2(){
     document.getElementById("timejump").style.display = "none";
-    document.body.style.backgroundImage = "url('images/messyroom.png')";
+    document.body.style.backgroundImage = "url('images/chaoticroom.png')";
     document.getElementById("sim-text").innerHTML = "It's your germaphobic sister, who pleads to disinfect your room 3 times. <br> Do you let your sister disinfect your room?";
     document.getElementById("b3").style.display = "none";
     document.getElementById("b2y").disabled = false;
@@ -119,6 +122,7 @@ function page2p2(){
     
 }
 function update2(text,button){  
+    document.body.style.backgroundImage = "url('images/cleanroom.png')";
     document.getElementById("sim-text").innerHTML = programText[text];
     document.getElementById("b1").disabled = true;
     document.getElementById("b2").disabled = true;
@@ -131,7 +135,7 @@ function update2(text,button){
     else{
         choice1.push("no");
     }
-    console.log(choice1)   
+    console.log(choice1);   
     
     document.getElementById("invNext2").style.display = "block";
 }
@@ -148,6 +152,12 @@ function update(text,button){
     else{
         choice1.push("no");
     }
-    console.log(choice1)
-    nextPage()
+    console.log(choice1);
+    nextPage();
+}
+
+function end(){
+    document.getElementById("end").style.display = "block";
+    document.getElementById("lastbutton").style.display = "none";
+    document.getElementById("sim-text").innerHTML = "The diagram below shows the formation of superbugs!";
 }
