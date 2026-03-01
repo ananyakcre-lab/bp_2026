@@ -2,7 +2,9 @@
 let programText = {"yes1":"Nothing happens... you're still sick :( <br> However, after a few days, you get better naturally!",
     "no1":"You decide to go the natural way... warm water and rest is the way to go!<br>You eventually get better!",
     "yes2":"After a long day, you come home to your room smelling like Lysol. It's a bit strong, but at least your room is clean!",
-    "no2":"You come home after a long day of work, and you see your cluttered room. You can't take it anymore, and you clean your room using minimal disinfectant; you weren't to sick in the first place."
+    "no2":"You come home after a long day of work, and you see your cluttered room. You can't take it anymore, and you clean your room using minimal disinfectant; you weren't too sick in the first place.",
+    "yes3":"You eat the steak happily, but you get sick again. You try to take more antibiotics, but you've created a super bug, and now it can't be cured!",
+    "no3": "Good job, over the past few weeks you've avoided creating a powerful superbug, one that could cause your whole family to fall sick. However, you still did something that could cause a super bug. You took unnecessary antibiotics when you didn't have a bacterial infection."
 };
 let choice1 = [];
 
@@ -11,8 +13,6 @@ function nextPage(){
     nextButton.style.display ="block";//used ai overview on google to explain how to ak the button appear
     document.getElementById("sickdiv").innerHTML = "<img id = 'sick' src='images/healthystick.png'>" //vscode ai used to fill in syntax  for everything after innerHTML = 
 }
-
-
 
 function page2(){
     document.getElementById("timejump").innerHTML = "A few days later...";
