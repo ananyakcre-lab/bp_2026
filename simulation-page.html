@@ -6,7 +6,7 @@
         <style> 
             body {
             /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
-                font-family: ;
+                font-family:'Google Sans', ;
                 background-image: url('images/updatedbg.png');
                 /*This was made prettier with co-pilot*/
                 background-size: cover;
@@ -22,8 +22,12 @@
     
      <h1 id = "sim-text">You are sick, and you don't know if you have a viral or bacterial infection. <br>Do you take antibiotics?</h1>
      <div id = "yes-no-buttons">
-        <button id = "b1"class = "buttons" onclick = "update('yes1','yes')">Yes</button>
+        <button id = "b1" class = "buttons" onclick = "update('yes1','yes')">Yes</button>
         <button id = "b2" class = "buttons" onclick = "update('no1','no')">No</button>
+        <div>
+        <button id = "b2y" style = "display:none;" class = "buttons" onclick = "update('yes2','yes')">Yes</button>
+        <button id = "b2n" style = "display:none;" class = "buttons" onclick = "update('no2','no')">No</button>
+        </div>
         <button style = "display:none;" id = "b3" onclick = "page2p2()" class = "buttons" >Next</button>
     </div>
     <div id = "sickdiv">

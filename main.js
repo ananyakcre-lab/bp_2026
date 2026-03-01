@@ -1,7 +1,8 @@
 
 let programText = {"yes1":"Nothing happens... you're still sick :( <br> However, after a few days, you get better naturally!",
     "no1":"You decide to go the natural way... warm water and rest is the way to go!<br>You eventually get better!",
-    "yes2":"After a long day, you come home to your room smelling like Lysol. It's a bit strong, "};
+    "yes2":"After a long day, you come home to your room smelling like Lysol. It's a bit strong, but at least your room is clean!",
+    "no2":"You come home after a long day of work, and you see your cluttered room. You can't take it anymore, and you clean your room using minimal disinfectant; you weren't to sick in the first place."};
 let choice1 = [];
 
 function nextPage(){
@@ -25,17 +26,19 @@ function page2p2(){
     document.getElementById("timejump").style.display = "none";
     document.getElementById("sim-text").innerHTML = "It's your germaphobic sister, who pleads to disinfect your room 3 times. <br> Do you let your sister disinfect your room?";
     document.getElementById("b3").style.display = "none";
-    document.getElementById("b1").style.display = "block";
-    document.getElementById("b2").style.display = "block";
-    document.getElementById("b1").innerHTML = "<button onclick = 'update("
-
-
+    document.getElementById("b2y").disabled = false;
+    document.getElementById("b2n").disabled = false;
+    document.getElementById("b2y").style.display = "block";
+    document.getElementById("b2n").style.display = "block";
+    
 }
 
 function update(text,button){
     document.getElementById("sim-text").innerHTML = programText[text];
     document.getElementById("b1").disabled = true;
     document.getElementById("b2").disabled = true;
+    document.getElementById("b2y").disabled = true;
+    document.getElementById("b2n").disabled = true;
     if (button === 'yes'){
         choice1.push("yes");
         
