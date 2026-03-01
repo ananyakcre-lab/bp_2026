@@ -1,0 +1,33 @@
+.topnav{
+    position:fixed;
+    background-color:#f9cde2;
+    overflow: hidden;
+    width:100%;/*this line was generated with vscode ai code generator*/
+}
+
+.buttons{
+    background-color:rgb(226, 118, 178);
+    width:100px;
+    height: 50px;
+}
+.intro-text{
+    margin-right: 100px;
+    padding:100px;
+    background-image: url("images/textbox.png");
+}
+
+/* used ai for help w/ background */
+
+body {
+    background-image: url("house.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+
+
